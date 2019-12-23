@@ -1,9 +1,13 @@
 package com.hirauchi.fortune
 
+import android.animation.ObjectAnimator
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
+import android.view.animation.Animation
+import android.view.animation.AnimationSet
+import android.view.animation.TranslateAnimation
 import android.widget.ImageView
 import com.google.android.gms.ads.AdRequest
 import com.google.android.gms.ads.AdView
@@ -25,6 +29,13 @@ class MainActivity : AppCompatActivity() {
         findViewById<ImageView>(R.id.menu_app_info).setOnClickListener {
             startActivity(Intent(this, AppInfoActivity::class.java))
         }
+
+        val animation = TranslateAnimation(0F, 0F, 0F, -30F).apply {
+            duration = 1200
+            repeatMode = Animation.REVERSE
+            repeatCount = Animation.INFINITE
+        }
+        findViewById<ImageView>(R.id.omikuji).animation = animation
     }
 
     override fun onResume() {

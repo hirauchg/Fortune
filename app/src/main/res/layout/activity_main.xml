@@ -16,12 +16,13 @@
         android:layout_alignParentEnd="true"
         android:layout_margin="16dp"/>
 
-    <FrameLayout
-        android:id="@+id/base_container"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_marginBottom="60dp">
-    </FrameLayout>
+    <ImageView
+        android:id="@+id/omikuji"
+        android:layout_width="320dp"
+        android:layout_height="252dp"
+        android:src="@drawable/omikuji"
+        android:elevation="2dp"
+        android:layout_centerInParent="true"/>
 
     <com.google.android.gms.ads.AdView
         xmlns:ads="http://schemas.android.com/apk/res-auto"
