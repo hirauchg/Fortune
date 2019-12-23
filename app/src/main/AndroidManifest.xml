@@ -23,7 +23,7 @@
             </intent-filter>
         </activity>
 
-        <activity android:name="com.hirauchi.appinfolibrary.AppInfoActivity"
+        <activity android:name=".AppInfoActivity"
                   android:screenOrientation="portrait"/>
     </application>
 
